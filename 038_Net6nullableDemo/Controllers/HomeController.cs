@@ -15,7 +15,12 @@ namespace _038_Net6nullableDemo.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            TestModel model = new TestModel()
+            {
+                Id = 1,
+                Name = null
+            };
+            return View(model);
         }
 
         public IActionResult Privacy()
